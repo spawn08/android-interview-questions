@@ -52,11 +52,9 @@
 
 * **What is the difference between onCreate() and onStart()** - [Learn from here](https://www.youtube.com/watch?v=RiFui-i-s-o)
 
-* **When only onDestroy is called for an activity without onPause() and onStop()?**
-    - If finish() is called in the onCreate method of an activity, the system will call onDestroy() method directly.
+* **When only onDestroy is called for an activity without onPause() and onStop()?** - [Learn from here](https://www.youtube.com/watch?v=QSxcLnZ1-RU)
 
-* **Why do we need to setContentView() in onCreate() of Activity class?**
-    - onCreate() is called only once and most of the initializations are done here. So, the content is also set when onCreate() is called. It will be inefficient if we set the content in onResume() or onStop() or somewhere else.
+* **Why do we need to call setContentView() in onCreate() of Activity class?** - [Learn from here](https://www.youtube.com/watch?v=zeYK8JdMOi8)
 
 * **What is onSavedInstanceState() and onRestoreInstanceState() in activity?**
     - onSavedInstanceState() - This method is used to store data before pausing the activity.
@@ -78,7 +76,7 @@
 
 * **What is the difference between adding/replacing fragment in backstack?** - [Learn from here](https://stackoverflow.com/questions/24466302/basic-difference-between-add-and-replace-method-of-fragment/24466345)
 
-* **Why is it recommended to use only the default constructor to create a `Fragment`?** - [Learn from here](https://stackoverflow.com/a/16042750/2809326)
+* **Why is it recommended to use only the default constructor to create a `Fragment`?** - [Learn from here](https://www.youtube.com/watch?v=9EdvcycKP9A)
 
 * **How would you communicate between two Fragments?** - [Learn from here](https://blog.mindorks.com/how-to-communicate-between-fragments)
 
@@ -107,9 +105,13 @@
 
 * **Do you know what is the view tree? How can you optimize its depth?** - [Learn from here](https://developer.android.com/reference/android/view/ViewTreeObserver)
 
+* **How does the Touch Control and Events work in Android?** - [Learn from here](https://blog.mindorks.com/touch-control-and-events-in-android) and [here](https://www.youtube.com/watch?v=tKeYr7iV5xE)
+
 #### Displaying Lists of Content
 
 * **What is the difference between `ListView` and `RecyclerView`?** - [Learn from here](https://stackoverflow.com/questions/26728651/recyclerview-vs-listview)
+
+* **How does RecyclerView work internally?** - [Learn from here](https://blog.mindorks.com/how-does-recyclerview-work-internally) and [here](https://www.youtube.com/watch?v=60IYWdnHsZI)
 
 * **What is the ViewHolder pattern? Why should we use it?** - [Learn from here](https://stackoverflow.com/questions/21501316/what-is-the-benefit-of-viewholder-pattern-in-android)
 
@@ -304,13 +306,15 @@
 
 * **Explain Work Manager in Android.** - [Learn from here](https://blog.mindorks.com/integrating-work-manager-in-android)
 
+* **Use-cases of WorkManager in Android.** - [Learn from here](https://www.youtube.com/watch?v=4LTpYXFMnJw)
+
 #### Others
 
 * **Why Bundle class is used for data passing and why cannot we use simple Map data structure?** - [Learn from here](https://developer.android.com/guide/components/activities/parcelables-and-bundles)
 
 * **How do you troubleshoot a crashing application?** - [Learn from here](https://developer.android.com/topic/performance/vitals/crash)
 
-* **Explain Android notification system?** - [Learn from here](https://developer.android.com/guide/topics/ui/notifiers/notifications)
+* **Explain Android notification system?** - [Learn from here](https://blog.mindorks.com/how-to-increase-push-notification-delivery-rate-in-android)
 
 * **What is the difference between Serializable and Parcelable? Which is the best approach in Android?** - [Learn from here](https://android.jlelse.eu/parcelable-vs-serializable-6a2556d51538)
 
@@ -372,13 +376,15 @@
 
 * **Difference between Schedulers.io() and Schedulers.computation() in RxJava.**
 
-* **How does the custom scope work in Dagger?**
+* **Why do we use the Dependency Injection Framework like Dagger in Android?** - [Learn from here](https://blog.mindorks.com/why-do-we-use-the-dependency-injection-framework-in-android)
 
 * **How does the Dagger work?** - [Learn from here](https://blog.mindorks.com/android-annotation-processing-tutorial-part-1-a-practical-approach) and [here]((https://www.youtube.com/watch?v=Grzqz-B3NWU))
 
 * **What is Component in Dagger?** - [Learn from here](https://www.youtube.com/watch?v=Grzqz-B3NWU)
 
 * **What is Module in Dagger?** - [Learn from here](https://www.youtube.com/watch?v=Grzqz-B3NWU)
+
+* **How does the custom scope work in Dagger?**
 
 * **When to call dispose and clear on CompositeDisposable in RxJava?** - [Learn from here](https://stackoverflow.com/questions/47057885/when-to-call-dispose-and-clear-on-compositedisposable)
 
@@ -429,6 +435,8 @@
 * **Design LRU Cache.**
 
 * **Design File Downloader** - [Lear from here](https://github.com/MindorksOpenSource/PRDownloader)
+
+* **HTTP Request vs HTTP Long-Polling vs WebSockets** - [Lear from here](https://www.youtube.com/watch?v=k56H0DHqu5Y)
 
 ### Android Unit Testing
 * **What is Espresso?** - [Learn from here](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
@@ -506,12 +514,37 @@
     [abstraction](https://en.wikipedia.org/wiki/Abstraction_(software_engineering)), and
     [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
 
-* **What is the difference between a constructor and a method?** 
+* **What is the difference between a constructor and a method?**
     - The name of the constructor is same as that of the class name, whereas the name of the method can be anything.
     - There is no return type of a constructor.
-    - When you make an object of a class, then the constructor of that class will be called automatically. But for methods, we need to call it explicitely.
+    - When you make an object of a class, then the constructor of that class will be called automatically. 
+      But for methods, we need to call it explicitely.
     - Constructors can't be inherited but you can call the constructor of the parent class by calling `super()`.
-
+    - Constructor and a method they both run a block of code but the difference is in calling them.
+    - We can call method directly using their name.
+    - Constructor Syntax -
+        ```java
+        public class SomeClassName{
+            SomeClassName(parameter_list){ 
+                ...
+            } 
+            ...
+        }
+        ```
+    - Note:
+        In the above syntax, the name of the constructor is the same as that of class
+        and it has no return type.
+        
+    - Method Syntax 
+        ```java
+        public class SomeClassName{
+            public void someMethodName(parameter_list){
+                ...
+            }
+            // call method
+            someMethodName(parameter_list)
+        }
+        ```
 * **Differences between abstract classes and interfaces?** 
     - An abstract class, is a class that contains both concrete and abstract methods 
     (methods without implementations). An abstract method must be implemented by the abstract class
@@ -1030,6 +1063,8 @@
 
 * **Explain the use-case of `let`, `run`, `with`, `also`, `apply` in Kotlin.** - [Learn from here](https://blog.mindorks.com/using-scoped-functions-in-kotlin-let-run-with-also-apply) and [here](https://www.youtube.com/watch?v=AiFBEH54Xpw)
 
+* **Difference between List and Array types in Kotlin** - [Learn from here](https://blog.mindorks.com/difference-between-list-and-array-types-in-kotlin)
+
 * **What are `Labels` in Kotlin?** - [Learn from here](https://blog.mindorks.com/learn-kotlin-returns-jumps-labels)
 
 * **What is an `Init` block in Kotlin?** - [Learn from here](https://blog.mindorks.com/understanding-init-block-in-kotlin)
@@ -1045,6 +1080,8 @@
 * **What is Coroutine Scope?** - [Learn from here](https://blog.mindorks.com/mastering-kotlin-coroutines-in-android-step-by-step-guide)
 
 * **What is Coroutine Context?** - [Learn from here](https://blog.mindorks.com/mastering-kotlin-coroutines-in-android-step-by-step-guide)
+
+* **Launch vs Async in Kotlin Coroutines** - [Learn from here](https://www.youtube.com/watch?v=nC30UiDv8Xc)
 
 * **What is inline function in Kotlin?** - [Learn from here](https://blog.mindorks.com/understanding-inline-noinline-and-crossinline-in-kotlin)
 
@@ -1300,9 +1337,11 @@
 
 * **Explain Annotation processing.**  - [Learn from here](https://blog.mindorks.com/android-annotation-processing-tutorial-part-1-a-practical-approach)
 
-* **How to increase the Notification delivery rate?**
+* **How to increase the Notification delivery rate?** [Learn from here](https://blog.mindorks.com/how-to-increase-push-notification-delivery-rate-in-android)
 
-* **How to show local Notification at an exact time?**
+* **How does the notification system work?** [Learn from here](https://blog.mindorks.com/how-to-increase-push-notification-delivery-rate-in-android)
+
+* **How to show local Notification at an exact time?** [Learn from here](https://blog.mindorks.com/how-to-increase-push-notification-delivery-rate-in-android)
 
 ### Found this project useful :heart:
 
